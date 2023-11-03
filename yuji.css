@@ -4,9 +4,11 @@
 }
 
 .light-theme{
-    --primary-color:#d5d5d5;
+    --primary-color:#d2d2d2;
     --secondary-color:#222;
+    transition: 1.0s;
 }
+
 
 *{
     padding: 0;
@@ -34,11 +36,25 @@
     height: 50px;
     width:  50px;
     line-height: 50px;
-    background-color: #2b2a2a;
+    background-color: #300000;
     border-radius: 50%;
     text-align: center;
 }
 
+.toggle:hover i{
+    position: fixed;
+    right: 4%;
+    top: 5%;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    background-color: #8B0000;
+    color: var(--secondary-color);
+    transition: 0.5s;
+}
+
+/*about me1*/
 .header-content{
     display: flex;
     justify-content: space-between;
@@ -79,7 +95,7 @@
     content: "";
     background-color: #8B0000;
     position: absolute;
-    top: 25%;
+    top: 18%;
     left: -6%;
     height: 5px;
     width: 30px;

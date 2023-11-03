@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE-edge">
         <meta name="viewport" content="width=device-width, initial-scale-1.0">
         <title>Portfolio | web</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="yuji.css">
                 <!-- for awesome icons css -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     </head>
@@ -14,20 +14,22 @@
         <div class="hero-header">
             <div class="container">
                 <div class="toggle">
-                    <i class="fa fa-sun"></i>
+                    <i class="fa fa-moon" class="fa fa-sun"></i>
                 </div>
 
                <div class="header-content">
-                <div class="profile">
+                    <div class="profile">
                     <img src="yuji.jpg" alt="Yuji Itadori">
                 </div>
                     <div class="text-content">
-                        <h1>I'm Benedict Rivera <br><span>Mawd JJHigh Student</span></h1>
-                        <p> some txt about me.
+                        <h1>Yuji Itadori <br><span>Jujutsu High | G-1 Sorcerer</span></h1>
+                        <p> Hi, I'am Benedict Rivera, I'm studying at Baguio S.T.I Colleges as a Senior High Mawd student
+                            and i'am a beginner and exploring about web programming. if you want to see more page, just click the "see page" down bellow.
                         </p>
-                        <button class="button">
-                            <span class="text">See page</span>
-                            <span class="icon fa fa-arrow-right"></span>
+
+                        <button  class="button">
+                            <span class="text">see page</span>
+                            <span class="icon fa fa-arrow-circle-right"></span>
                         </button>
                     </div>
 
@@ -37,18 +39,17 @@
                                 <i class="fa fa-home active"></i>
                             </a>
                             <a href="#">
-                                <i class="fa fa-user"></i>
+                                <i class="fa fa-user active"></i>
                             </a>
                             <a href="#">
-                            <i class="fa fa-cog"></i>
+                            <i class="fa fa-cog active"></i>
                             </a>
                             <a href="#">
-                            <i class="fa fa-comment"></i>
+                            <i class="fa fa-comment active"></i>
                             </a>
                         </div>
                     </div>
                </div> 
-                
             </div>
         </div>
 
@@ -61,13 +62,13 @@
                 body.classList.toggle("light-theme");
                 if(body.classList.contains("light-theme"))
                 {
-                    icon.classList.add("fa-moon");
-                    icon.classList.remove("fa-sun");
+                    icon.classList.add("fa-sun");
+                    icon.classList.remove("fa-moon");
                 }
                 else
                 {
-                    icon.classList.add("fa-sun");
-                    icon.classList.remove("fa-moon");
+                    icon.classList.add("fa-moon");
+                    icon.classList.remove("fa-sun");
                 }
          }
         </script>

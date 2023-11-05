@@ -1,0 +1,138 @@
+:root{
+    --primary-color:#f2f2f2;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+@keyframes fade-down {
+    0% {
+       opacity: 0;
+       transform: translateY(-30px) scale(0.9);
+    }
+     100% {
+       opacity: 1;
+       transform: translateY(0px) scale(1);
+     }
+   }
+
+   @keyframes fade-up {
+    0% {
+       opacity: 0;
+       transform: translateY(30px) scale(0.9);
+    }
+     100% {
+       opacity: 1;
+       transform: translateY(0px) scale(1);
+     }
+   }
+
+.background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(Jujutsu.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(4px);
+    animation:fade-down 1.00s;
+}
+
+.content{
+    color: #d2d2d2;
+    margin-top: 200px;
+    text-align: center;
+}
+
+.content h1{
+    font-family: poppins;
+    font-size: 90px;
+    margin-bottom: 10px;
+    animation:fade-down 2.00s;
+}
+
+.content h2{
+    font-family: 'Lucida Sans';
+    font-size: 40px;
+    margin-bottom: 10px;
+    animation:fade-down 1.5s;
+}
+
+.content p{
+    font-size: 25px;
+    animation:fade-down 1.5s;
+}
+
+.navigation .nav{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+    padding: 0.5rem;
+    text-align: center;
+    animation:fade-up 1.00s;
+    }
+    
+    .navigation .nav a{
+        size: fixed;
+        position: relative;
+        font-size: 18px;
+        display: block;
+        margin: 5px;
+        transition: 0.5s;
+        color: var(--primary-color);
+        animation:fade-up 1.00s;
+    }
+    
+    .navigation .nav a i{
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        background-color: #2b2a2a;
+        border-radius: 50%;
+        text-align: center;
+        color: #fff;
+        transition: 0.5s;
+        animation:fade-up 1.00s;
+    }
+    
+    .navigation .nav .active{
+        color: var(--primary-color);
+        background-color: #002244;
+    }
+    
+    .navigation .nav a:hover i{
+        background-color: #0000FF;
+        color: var(--primary-color);
+    }
+    
+
+    @media(max-width:1200px)
+{
+    .background{
+        flex-direction: column;
+    }
+    .content{
+        width: 100%;
+        text-align: center;
+    }
+    .navigation{
+        background-color: #2b2a2a;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    .navigation .nav{
+        width: 60%;
+        flex-direction: row;
+        padding: 0.3rem;
+        margin: auto;
+    }
+}

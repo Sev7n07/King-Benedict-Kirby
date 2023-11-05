@@ -1,0 +1,265 @@
+:root{
+    --primary-color:#111;
+    --secondary-color:#f2f2f2;
+    transition: 1.00s;
+}
+
+.light-theme{
+    --primary-color:rgb(206, 152, 5);
+    --secondary-color:#222;
+    transition: 1.00s;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+@keyframes fade-down {
+ 0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.9);
+ }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+@keyframes fade-up {
+    0% {
+       opacity: 0;
+       transform: translateY(30px) scale(0.9);
+    }
+     100% {
+       opacity: 1;
+       transform: translateY(0px) scale(1);
+     }
+   }
+
+.hero-header{
+    min-height: 100vh;
+    background-color: var(--primary-color);
+    font-family: poppins,sans-serif;
+    animation:fade-down 0.5s;
+}
+
+.container{
+    width: 95%;
+    margin: 0 auto;
+}
+
+.toggle{
+    position: fixed;
+    right: 4%;
+    top: 5%;
+    color: #fff;
+    height: 50px;
+    width:  50px;
+    line-height: 50px;
+    background-color: #2b2a2a;
+    border-radius: 50%;
+    text-align: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    animation:fade-down 2.00s;
+}
+
+.header-content .profile{
+    height: 550px;
+    width: 650px;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 7px 5px 28px rgba(0,0,0,0.2);
+    animation:fade-down 2.00s;
+}
+
+.profile img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    animation:fade-down 2.00s;
+}
+
+.header-content .text-content{
+    padding: 2rem 3.5rem;
+    margin: 1.2rem;
+    color: var(--secondary-color);
+    width: 80%;
+    animation:fade-down 0.5s;
+}
+
+.header-content .text-content h1{
+    font-size: 3.5rem;
+    color: #8b5f00;
+    position: relative;
+    line-height: 3.6rem;
+    margin-bottom: 1.5rem;
+    animation:fade-down 0.5s;
+}
+
+.header-content .text-content h1::before{
+    content: "";
+    background-color: #8b6b00;
+    position: absolute;
+    top: 25%;
+    left: -6%;
+    height: 5px;
+    width: 30px;
+    border-radius: 10px;
+    animation:fade-down 0.5s;
+}
+
+.header-content .text-content h1 span{
+    color: var(--secondary-color);
+}
+
+.navigation .nav{
+display: flex;
+justify-content: space-between;
+flex-direction: column;
+position: relative;
+padding: 0.8rem;
+animation:fade-up 1.00s;
+}
+
+.navigation .nav a{
+    position: relative;
+    font-size: 18px;
+    display: block;
+    margin: 10px;
+    transition: 05s;
+    color: var(--secondary-color);
+    animation:fade-up 1.00s;
+}
+
+.navigation .nav a i{
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    background-color: #2b2a2a;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    transition: 0.5s;
+    animation:fade-up 1.00ss;
+}
+
+.navigation .nav .active{
+    color: var(--secondary-color);
+    background-color: rgb(150, 110, 2);
+}
+
+.navigation .nav a:hover i{
+    background-color: #5e4000;
+    color: var(--secondary-color);
+}
+
+.header-content .button{
+    position: relative;
+    width: 210px;
+    min-height: 45px;
+    line-height: 45px;
+    overflow: hidden;
+    border: 1px solid #8b6600;
+    border-radius: 35px;
+    margin: 2.5rem 0;
+    color: var(--secondary-color);
+    background-color: transparent;
+    font-size: 15px;
+    animation:fade-down 1.00s;
+}
+
+.button .text{
+    font-family:poppins;
+    font-size: 18px;
+    animation:fade-down 1.00s;
+}
+
+.button .icon{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 47px;
+    width: 47px;
+    border-radius: 35px;
+    background-color: #8b7100;
+    color: #fff;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    animation:fade-down 1.00s;
+}
+
+.button:hover .icon{
+    width: 100%;
+}
+
+@media(max-width:1200px)
+{
+    .header-content{
+        flex-direction: column;
+    }
+    .header-content .profile{
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        margin-top: 2rem;
+        animation:fade-down 0.5s;
+    }
+    .header-content .profile img{
+        width: 100%;
+        height: 100%;
+        animation:fade-down 0.5s;
+    }
+    .text-content{
+        width: 100%;
+        text-align: center;
+        animation:fade-down 0.5s;
+    }
+    .text-content h1::before{
+        display: none;
+        animation:fade-down 0.5s;
+    }
+    .navigation{
+        background-color: #2b2a2a;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        animation:fade-down 0.5s;
+    }
+    .navigation .nav{
+        width: 60%;
+        flex-direction: row;
+        padding: 0.3rem;
+        margin: auto;
+        animation:fade-down 0.5s;
+    }
+}
+@media(max-width:768){
+    .header-content .profile{
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        margin-top: 2rem;
+    }
+    .header-content .profile img{
+        width: 100%;
+        height: 100%;
+    }
+    .header-content .text-content h1{
+        font-size: 2rem;
+        line-height: 1.8rem;
+    }
+}

@@ -191,28 +191,7 @@ animation:fade-up 1.00s;
     animation:fade-down 1.00s;
 }
 
-.button .text{
-    font-family:poppins;
-    font-size: 18px;
-    animation:fade-down 1.00s;
-}
 
-.button .icon{
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 47px;
-    width: 47px;
-    border-radius: 35px;
-    background-color: #8b7100;
-    color: #fff;
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.5s;
-    animation:fade-down 1.00s;
-}
 
 .button:hover .icon{
     width: 100%;
